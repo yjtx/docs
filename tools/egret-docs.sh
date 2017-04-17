@@ -3,7 +3,7 @@
 # Any issue, contact Dakun Leng (lengdakun)
 
 WORKSPACE="./"
-PROJECT_NAME="docs"
+PROJECT_NAME="egret-docs"
 PROJECT_GIT="https://github.com/egret-labs/egret-docs"
 PROJECT_TREE="engine2d,3d,db"
 IS_CLEAN=false
