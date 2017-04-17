@@ -1,0 +1,24 @@
+.conversion{position:absolute;top:8px;left:8px;
+width:24px;height:24px;background: url("sprites.png") no-repeat -24px -24px;}
+.dragonbones{position:absolute;top:8px;left:8px;
+width:24px;height:24px;background: url("sprites.png") no-repeat -48px -48px;}
+.egret2d{position:absolute;top:8px;left:8px;
+width:24px;height:24px;background: url("sprites.png") no-repeat -48px -24px;}
+.egret3d{position:absolute;top:8px;left:8px;
+width:24px;height:24px;background: url("sprites.png") no-repeat -48px -0px;}
+.extends{position:absolute;top:8px;left:8px;
+width:24px;height:23px;background: url("sprites.png") no-repeat -24px -72px;}
+.feather{position:absolute;top:8px;left:8px;
+width:24px;height:24px;background: url("sprites.png") no-repeat -24px -48px;}
+.inspector{position:absolute;top:8px;left:8px;
+width:24px;height:24px;background: url("sprites.png") no-repeat -48px -72px;}
+.lakeshore{position:absolute;top:8px;left:8px;
+width:24px;height:24px;background: url("sprites.png") no-repeat -24px -0px;}
+.merger{position:absolute;top:8px;left:8px;
+width:24px;height:24px;background: url("sprites.png") no-repeat -0px -72px;}
+.plant{position:absolute;top:8px;left:8px;
+width:24px;height:24px;background: url("sprites.png") no-repeat -0px -48px;}
+.resdepot{position:absolute;top:8px;left:8px;
+width:24px;height:24px;background: url("sprites.png") no-repeat -0px -24px;}
+.wing{position:absolute;top:8px;left:8px;
+width:24px;height:24px;background: url("sprites.png") no-repeat -0px -0px;}

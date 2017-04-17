@@ -1,0 +1,202 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2015-10-29, 10:07:25
+    Author     : yangxiao
+*/
+.caption-wraper{position: absolute;left:50%;bottom:10em;}
+.caption-wraper .caption{
+position: relative;left:-50%;
+background-color: rgba(0, 0, 0, 0.54);
+padding: 0.4em 1em;
+color:#fff;
+-webkit-border-radius: 1.2em;
+-moz-border-radius: 1.2em;
+-ms-border-radius: 1.2em;
+-o-border-radius: 1.2em;
+border-radius: 1.2em;
+}
+@media (max-width: 767px)
+{
+    h1{
+        font-size: 24px;
+    }
+    .content{
+        text-align: left;
+        padding-left:2em;
+        padding-right: 0em;
+        width: 100%;
+    }
+    .content-right{
+        text-align: left;
+        padding-left:2em;
+        padding-right: 0em;
+        width: 100%;
+    }
+    .image{display: none}
+    .caption-wraper{left:0;bottom: 0.4em;}
+    .caption-wraper .caption{
+    left: 0;
+    padding: 0.2em 0.4em;
+    font-size: 0.92em;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;}
+}
+.sy-box{}
+.list-content{    
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.list-title{font-size:20px; padding-left: 5px;color: #000}
+.list-text{}
+.list-text a{color: #000; }
+.list-text a:hover{color: #31a1ef; }
+.list-text-des{padding-left: 51px;color:#999999;font-size: 11px;    display: block;}
+.radius-container{
+    text-align: center;
+    padding: 2px 8px 2px 8px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border: 1px #eaeaea double;
+    color: #00aeef;
+    display: block;
+    float: left;
+    margin-right: 15px;
+}
+.image
+{
+
+}
+.spotlight{
+    display:-ms-flexbox;	
+    display: -webkit-box;
+    display: flex;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    margin: 2em 0em 2em 0em;
+    padding: 2em 0em 2em 0em;
+}
+.content{
+    text-align: left;
+    padding-left:4em;
+    padding-right: 2em;
+    width: 80%;
+}
+.content-right{
+    text-align: right;
+    padding-left:2em;
+    padding-right: 4em;
+    width: 80%;
+    
+}
+
+.col-lg-5ths,.col-md-5ths,.col-sm-5ths,.col-xs-5ths {
+    position: relative;
+    min-height: 1px;
+    width: 25%;
+    float: left;
+}
+.no-padding{
+    padding: 0px -10px 0px 0px;
+    margin: 0px -10px 0px 0px;
+}
+
+.tools-icon{
+    //width:290px;
+    height:290px;
+    background-color: #f4f4f4;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+@media only screen and (min-width: 321px) and (max-width: 1024px) {
+    .col-lg-5ths,.col-md-5ths,.col-sm-5ths,.col-xs-5ths {
+        position: relative;
+        min-height: 1px;
+        width: 100%;
+        float: left;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+@media (min-width: 992px) {
+.tools-icon{
+    width:250px;
+    height:250px;
+    background-color: #f4f4f4;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+    .col-lg-5ths,.col-md-5ths,.col-sm-5ths,.col-xs-5ths {
+    position: relative;
+    min-height: 1px;
+    width: 25%;
+    float: left;
+    }
+}
+@media (min-width: 1290px) {
+.tools-icon{
+    width:290px;
+    height:290px;
+    background-color: #f4f4f4;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+    .col-lg-5ths,.col-md-5ths,.col-sm-5ths,.col-xs-5ths {
+    position: relative;
+    min-height: 1px;
+    width: 25%;
+    float: left;
+    }
+}
+
+
+.tools-icon img{
+    margin-top: 25%;
+}
+
+.tools-transparent {   
+    filter: alpha(opacity=90);    
+    -moz-opacity:0.9;    
+    -khtml-opacity: 0.9;    
+    opacity: 0.9;
+    height: 100%;
+    color: #ffffff;
+    padding-top: 25%;
+    bottom: 0px;
+    position: absolute;
+    width:100%;
+        padding-right: 10px;
+} 
+.tools-transparent p{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+h1{
+    font-size: 34px;
+}
+dt{
+    font-weight: normal;
+}
+dt img{
+    margin-top: -8px;
+}
+.label-radius-fff {
+    padding: 4px 10px 4px 10px;
+}
+
+.list-title-top{
+    margin-top: 40px;
+}
+    

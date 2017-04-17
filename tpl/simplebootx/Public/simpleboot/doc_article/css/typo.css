@@ -1,0 +1,350 @@
+@charset "utf-8";
+
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html {
+  color: #333;
+  background: #fff;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-rendering: optimizelegibility;
+}
+
+/* 如果你的项目仅支持 IE9+ | Chrome | Firefox 等，推荐在 <html> 中添加 .borderbox 这个 class */
+html.borderbox *, html.borderbox *:before, html.borderbox *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+.editormd-html-preview.typo body,.editormd-html-preview.typo dl,.editormd-html-preview.typo dt,.editormd-html-preview.typo dd,.editormd-html-preview.typo ul,.editormd-html-preview.typo ol,.editormd-html-preview.typo li,.editormd-html-preview.typo h1,.editormd-html-preview.typo h2,.editormd-html-preview.typo h3,.editormd-html-preview.typo h4,.editormd-html-preview.typo h5,.editormd-html-preview.typo h6,.editormd-html-preview.typo pre,.editormd-html-preview.typo code,.editormd-html-preview.typo form,.editormd-html-preview.typo fieldset,.editormd-html-preview.typo legend, input,.editormd-html-preview.typo textarea,.editormd-html-preview.typo p,.editormd-html-preview.typo blockquote,.editormd-html-preview.typo th,.editormd-html-preview.typo td,.editormd-html-preview.typo hr,.editormd-html-preview.typo button,.editormd-html-preview.typo article,.editormd-html-preview.typo aside,.editormd-html-preview.typo details,.editormd-html-preview.typo figcaption,.editormd-html-preview.typo figure,.editormd-html-preview.typo footer,.editormd-html-preview.typo header,.editormd-html-preview.typo menu,.editormd-html-preview.typo nav,.editormd-html-preview.typo section {
+  margin: 0;
+  padding: 0;
+}
+
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+.editormd-html-preview.typo article,.editormd-html-preview.typo aside,.editormd-html-preview.typo details,.editormd-html-preview.typo figcaption,.editormd-html-preview.typo figure,.editormd-html-preview.typo footer,.editormd-html-preview.typo header,.editormd-html-preview.typo menu,.editormd-html-preview.typo nav,.editormd-html-preview.typo section {
+  display: block;
+}
+
+/* HTML5 媒体文件跟 img 保持一致 */
+.editormd-html-preview.typo audio,.editormd-html-preview.typo canvas,.editormd-html-preview.typo video {
+  display: inline-block;
+}
+
+/* 要注意表单元素并不继承父级 font 的问题 */
+.editormd-html-preview.typo body, .editormd-html-preview.typo button,.editormd-html-preview.typo input,.editormd-html-preview.typo select,.editormd-html-preview.typo textarea,.editormd-html-preview.typo {
+  font: 300 16px PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans;
+}
+
+.editormd-html-preview.typo button::-moz-focus-inner,
+.editormd-html-preview.typo input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* 去掉各Table cell 的边距并让其边重合 */
+.editormd-html-preview.typo table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 去除默认边框 */
+.editormd-html-preview.typo fieldset,.editormd-html-preview.typo img {
+  border: 0;
+}
+
+/* 块/段落引用 */
+.editormd-html-preview.typo blockquote {
+  position: relative;
+  color: #999;
+  font-weight: 400;
+  border-left: 1px solid #1abc9c;
+  padding-left: 1em;
+  margin: 1em 3em 1em 2em;
+}
+
+@media only screen and ( max-width: 640px ) {
+  .editormd-html-preview.typo blockquote {
+    margin: 1em 0;
+  }
+}
+
+/* Firefox 以外，元素没有下划线，需添加 */
+.editormd-html-preview.typo acronym,.editormd-html-preview.typo abbr {
+  border-bottom: 1px dotted;
+  font-variant: normal;
+}
+
+/* 添加鼠标问号，进一步确保应用的语义是正确的（要知道，交互他们也有洁癖，如果你不去掉，那得多花点口舌） */
+.editormd-html-preview.typo abbr {
+  cursor: help;
+}
+
+/* 一致的 del 样式 */
+.editormd-html-preview.typo del {
+  text-decoration: line-through;
+}
+
+.editormd-html-preview.typo address,.editormd-html-preview.typo caption,.editormd-html-preview.typo cite,.editormd-html-preview.typo code,.editormd-html-preview.typo dfn,.editormd-html-preview.typo em,.editormd-html-preview.typo th,.editormd-html-preview.typo var {
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* 去掉列表前的标识, li 会继承，大部分网站通常用列表来很多内容，所以应该当去 */
+.editormd-html-preview.typo ul,.editormd-html-preview.typo ol {
+  list-style: none;
+}
+
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+.editormd-html-preview.typo caption,.editormd-html-preview.typo th {
+  text-align: left;
+}
+
+.editormd-html-preview.typo q:before,.editormd-html-preview.typo q:after {
+  content: '';
+}
+
+/* 统一上标和下标 */
+.editormd-html-preview.typo sub,.editormd-html-preview.typo sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+.editormd-html-preview.typo :root sub,.editormd-html-preview.typo :root sup {
+  vertical-align: baseline; /* for ie9 and other modern browsers */
+}
+
+.editormd-html-preview.typo sup {
+  top: -0.5em;
+}
+
+.editormd-html-preview.typo sub {
+  bottom: -0.25em;
+}
+
+/* 让链接在 hover 状态下显示下划线 */
+.editormd-html-preview.typo a {
+  color: #1abc9c;
+}
+
+.editormd-html-preview.typo a:hover {
+  text-decoration: underline;
+}
+
+.editormd-html-preview.typo a {
+  border-bottom: 1px solid #1abc9c;
+}
+
+.editormd-html-preview.typo a:hover {
+  border-bottom-color: #555;
+  color: #555;
+  text-decoration: none;
+}
+
+/* 默认不显示下划线，保持页面简洁 */
+.editormd-html-preview.typo ins,.editormd-html-preview.typo a {
+  text-decoration: none;
+}
+
+/* 专名号：虽然 u 已经重回 html5 Draft，但在所有浏览器中都是可以使用的，
+ * 要做到更好，向后兼容的话，添加 class="typo-u" 来显示专名号
+ * 关于 <u> 标签：http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-u-element
+ * 被放弃的是 4，之前一直搞错 http://www.w3.org/TR/html401/appendix/changes.html#idx-deprecated
+ * 一篇关于 <u> 标签的很好文章：http://html5doctor.com/u-element/
+ */
+.editormd-html-preview.typo u,.editormd-html-preview.typo .typo-u {
+  text-decoration: underline;
+}
+
+/* 标记，类似于手写的荧光笔的作用 */
+.editormd-html-preview.typo mark {
+  background: #fffdd1;
+  border-bottom: 1px solid #ffedce;
+  padding: 2px;
+  margin: 0 5px;
+}
+.editormd-html-preview.typo li {
+  line-height: 1.7;
+}
+/* 代码片断 */
+.editormd-html-preview.typo pre,.editormd-html-preview.typo code,.editormd-html-preview.typo pre tt {
+  font-family: Courier, 'Courier New', monospace;
+  color: initial;
+  background-color: initial;
+}
+
+.editormd-html-preview.typo pre {
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 1em 1.5em;
+  font-size: initial;
+  display: block;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 一致化 horizontal rule */
+.editormd-html-preview.typo hr {
+  border: none;
+  border-bottom: 1px solid #cfcfcf;
+  margin-bottom: 0.8em;
+  height: 10px;
+}
+
+/* 底部印刷体、版本等标记 */
+.editormd-html-preview.typo small,.editormd-html-preview.typo .typo-small,
+  /* 图片说明 */
+.editormd-html-preview.typo figcaption {
+  font-size: 0.9em;
+  color: #888;
+}
+
+.editormd-html-preview.typo strong,.editormd-html-preview.typo b {
+  font-weight: bold;
+  color: #000;
+}
+
+/* 可拖动文件添加拖动手势 */
+.editormd-html-preview.typo [draggable] {
+  cursor: move;
+}
+
+.editormd-html-preview.typo .clearfix:before,.editormd-html-preview.typo .clearfix:after {
+  content: "";
+  display: table;
+}
+
+.editormd-html-preview.typo .clearfix:after {
+  clear: both;
+}
+
+.editormd-html-preview.typo .clearfix {
+  zoom: 1;
+}
+
+/* 强制文本换行 */
+.editormd-html-preview.typo .textwrap,.editormd-html-preview.typo .textwrap td,.editormd-html-preview.typo .textwrap th {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.editormd-html-preview.typo .textwrap-table {
+  table-layout: fixed;
+}
+
+/* 提供 serif 版本的字体设置: iOS 下中文自动 fallback 到 sans-serif */
+.editormd-html-preview.typo .serif {
+  font-family: Palatino, Optima, Georgia, serif;
+}
+
+/* 保证块/段落之间的空白隔行 */
+.editormd-html-preview.typo p, .editormd-html-preview.typo pre, .editormd-html-preview.typo ul, .editormd-html-preview.typo ol, .editormd-html-preview.typo dl, .editormd-html-preview.typo form, .editormd-html-preview.typo hr, .editormd-html-preview.typo table,
+.editormd-html-preview.typo .typo-p,.editormd-html-preview.typo .typo-pre,.editormd-html-preview.typo .typo-ul,.editormd-html-preview.typo .typo-ol,.editormd-html-preview.typo .typo-dl,.editormd-html-preview.typo .typo-form,.editormd-html-preview.typo .typo-hr,.editormd-html-preview.typo .typo-table,.editormd-html-preview.typo blockquote {
+  margin-bottom: 1.2em
+}
+
+.editormd-html-preview.typo h1,.editormd-html-preview.typo h2,.editormd-html-preview.typo h3,.editormd-html-preview.typo h4,.editormd-html-preview.typo h5,.editormd-html-preview.typo h6 {
+  font-family: PingFang SC, Verdana, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+  font-weight: 100;
+  color: #000;
+  line-height: 1.35;
+}
+
+/* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
+.editormd-html-preview.typo h1, .editormd-html-preview.typo h2, .editormd-html-preview.typo h3, .editormd-html-preview.typo h4, .editormd-html-preview.typo h5, .editormd-html-preview.typo h6,
+.editormd-html-preview.typo .typo-h1,.editormd-html-preview.typo .typo-h2,.editormd-html-preview.typo .typo-h3,.editormd-html-preview.typo .typo-h4,.editormd-html-preview.typo .typo-h5, .typo-h6 {
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+  line-height: 1.35;
+}
+
+.editormd-html-preview.typo.typo h1,.editormd-html-preview.typo .typo-h1 {
+  font-size: 2em;
+}
+
+.editormd-html-preview.typo.typo h2,.editormd-html-preview.typo .typo-h2 {
+  font-size: 1.8em;
+}
+
+.editormd-html-preview.typo.typo h3,.editormd-html-preview.typo .typo-h3 {
+  font-size: 1.6em;
+}
+
+.editormd-html-preview.typo h4,.editormd-html-preview.typo .typo-h4 {
+  font-size: 1.4em;
+}
+
+.editormd-html-preview.typo h5,.editormd-html-preview.typo h6,.editormd-html-preview.typo .typo-h5,.editormd-html-preview.typo .typo-h6 {
+  font-size: 1.2em;
+}
+
+/* 在文章中，应该还原 ul 和 ol 的样式 */
+.editormd-html-preview.typo ul, .editormd-html-preview.typo .typo-ul {
+  margin-left: 1.3em;
+  list-style: disc;
+}
+
+.editormd-html-preview.typo ol, .typo-ol {
+  list-style: decimal;
+  margin-left: 1.9em;
+}
+
+.editormd-html-preview.typo li ul,.editormd-html-preview.typo li ol,.editormd-html-preview.typo .typo-ul ul,.editormd-html-preview.typo .typo-ul ol,.editormd-html-preview.typo .typo-ol ul,.editormd-html-preview.typo .typo-ol ol {
+  margin-bottom: 0.8em;
+  margin-left: 2em;
+}
+
+.editormd-html-preview.typo li ul,.editormd-html-preview.typo .typo-ul ul,.editormd-html-preview.typo .typo-ol ul {
+  list-style: circle;
+}
+
+/* 同 ul/ol，在文章中应用 table 基本格式 */
+.editormd-html-preview.typo table th,.editormd-html-preview.typo table td,.editormd-html-preview.typo .typo-table th,.editormd-html-preview.typo .typo-table td,.editormd-html-preview.typo table caption {
+  border: 1px solid #ddd;
+  padding: 0.5em 1em;
+  color: #666;
+}
+
+.editormd-html-preview.typo table th,.editormd-html-preview.typo .typo-table th {
+  background: #fbfbfb;
+}
+
+.editormd-html-preview.typo table thead th,.editormd-html-preview.typo .typo-table thead th {
+  background: #f1f1f1;
+}
+
+.editormd-html-preview.typo table caption {
+  border-bottom: none;
+}
+
+/* 去除 webkit 中 input 和 textarea 的默认样式  */
+.editormd-html-preview.typo .typo-input,.editormd-html-preview.typo .typo-textarea {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.editormd-html-preview.typo .typo-em,.editormd-html-preview.typo .typo em, legend, caption {
+  color: #000;
+  font-weight: inherit;
+}
+
+/* 着重号，只能在少量（少于100个字符）且全是全角字符的情况下使用 */
+.editormd-html-preview.typo .typo-em {
+  position: relative;
+}
+
+.editormd-html-preview.typo .typo-em:after {
+  position: absolute;
+  top: 0.65em;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  content: "・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・";
+}
+
+/* Responsive images */
+.editormd-html-preview.typo img {
+  max-width: 100%;
+}

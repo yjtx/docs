@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="skin-win8/ui.easytree.css" rel="stylesheet" class="skins" type="text/css" />
+        <script src="../jquery.min.js" type="text/javascript"></script>
+    <script src="jquery.easytree.min.js"></script>
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <div id="demo1_menu">
+    [
+       {
+          "href":"http:\/\/www.easyjstree.com",
+          "hrefTarget":"_blank",
+          "text":"Home"
+       },
+       {
+          "children":[
+             {
+                "href":"http:\/\/www.google.com",
+                "hrefTarget":"_blank",
+                "text":"Go to Google.com"
+             },
+             {
+                "href":"http:\/\/www.yahoo.com",
+                "hrefTarget":"_blank",
+                "text":"Go to Yahoo.com"
+             },
+             {
+                "children":[{}],
+                "isActive":false,
+                "isExpanded":true,
+                "isFolder":true,
+                "text":"Folder 2",
+                "tooltip":"Bookmarks"
+             }
+          ],
+          "isActive":false,
+          "isExpanded":true,
+          "isFolder":true,
+          "text":"Folder 1",
+          "tooltip":"Bookmarks"
+       },
+       {
+          "children":[
+             {
+                "text":"Sub Node 1"
+             },
+             {
+                "text":"Sub Node 2"
+             },
+             {
+                "text":"Sub Node 3"
+             }
+          ],
+          "isActive":false,
+          "text":"Node 1"
+       },
+       {
+          "text":"Node 2"
+       }
+    ]
+</div>
+<script>
+    $('#demo1_menu').easytree();
+</script>
+    </body>
+</html>

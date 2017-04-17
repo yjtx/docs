@@ -1,0 +1,498 @@
+/*navigation*/
+nav{
+	text-align:center;
+	position:relative;
+	z-index:100;
+}
+
+/*禁用chrome自动填充样式*/
+input:-webkit-autofill { 
+	-webkit-box-shadow: 0 0 0px 1000px white inset !important; 
+} 
+@media screen and (min-width:320px) and (max-width:1024px){
+	nav ul.menu{
+		display:none;
+		text-align:left;
+		height:auto;
+		position: relative;
+    	z-index: 100;	
+	}
+	nav .title{
+		color:#fff;
+		text-align:left;
+		line-height:55px;
+		padding:0 20px;
+	}
+	.navMore{
+		position:absolute;
+		right:20px;
+		top:24px;
+	}
+	.productBox{
+		/*display:none;*/
+		text-align: left;
+	}
+	.expBox {
+		text-align: left;
+	}
+}
+nav ul.menu li,
+nav ul.menu li a{
+	display:inline-block;
+	font-size:14px;
+	line-height:58px;
+	color:#fff;
+	cursor:pointer;
+	text-decoration:none;
+}
+@media screen and (min-width:320px) and (max-width:1024px){
+	nav ul.menu li,
+	nav ul.menu li a{
+	display:inherit;
+	font-size:14px;
+	line-height:40px;
+}
+}
+nav ul.menu li{
+	margin:0 19px;
+}
+nav ul.menu li a:hover{
+	color:#1dafec;
+}
+.nav-icon{
+    position: relative;
+    /*left: 8%;*/
+    top: 18px;
+}
+@media screen and (min-width:1024px) and (max-width:1310px){
+	.nav-icon{
+		left:2%;
+	}
+}
+.flex{
+	display:flex;
+	display:-webkit-flex;
+	display:-ms-flex;
+	display:-moz-flex;
+	display:-o-flex;
+	 flex-wrap:wrap;
+	-webkit-flex-wrap:wrap;
+	-ms-flex-wrap:wrap;
+	-moz-flex-wrap:wrap;
+	-o-flex-wrap:wrap;
+	justify-content:flex-start;
+}
+nav .subnav-products{
+	/*width:836px;*/
+	position:absolute;
+	/*border-top:1px solid #1dafec; */
+	z-index:1050;
+	margin-left: 10px;
+	/*margin-top: 20px;*/
+	/*display:none;*/
+}
+ul.subnav-products {
+	list-style: none;
+}
+nav .subnav-club,
+nav .subnav-open,
+nav .subnav-dev-center{
+	width:300px;
+	position:absolute;
+	border-top:1px solid #1dafec; 
+	z-index:10;
+	/*display:none;*/
+
+}
+nav .subnav-club{
+	width:150px;
+}
+
+nav .subnav-club .productBox a,
+nav .subnav-open .productBox a,
+nav .subnav-dev-center .productBox a,
+nav .subnav-products .productBox a{
+	color:#959595;
+	width:100%;
+	height:100%;
+	display:block;
+	text-decoration:none;
+	text-align: left;
+	line-height: 50px;
+	padding-left: 60px;
+}
+nav .subnav-products .productBox{
+	background:#000;
+	width:200px;
+	height:50px;
+	color:#959595;
+	cursor:pointer;
+	text-align:left;
+	border-bottom:1px solid #1c1c1c;
+	border-right:1px solid #1c1c1c;
+	position: relative;
+}
+nav .expBox .subnav-products .productBox {
+	width: 100px;
+}
+nav .subnav-products .productBox:nth-of-type(4n+4){
+	/*border-right:none;*/
+}
+nav .subnav-products .productBox:nth-last-of-type(4),
+nav .subnav-products .productBox:nth-last-of-type(3),
+nav .subnav-products .productBox:nth-last-of-type(2),
+nav .subnav-products .productBox:nth-last-of-type(1){
+	/*border-bottom:none;*/
+}
+nav .subnav-club .productBox,
+nav .subnav-open .productBox,
+nav .subnav-dev-center .productBox{
+	background:rgba(0,0,0,0.9);
+	width:100%;
+	height:50px;
+	line-height:50px;
+	color:#b1b1b1;
+	cursor:pointer;
+	border-bottom:1px solid #131313;
+	text-align:left;
+	position:relative;
+}
+nav .subnav-club span,
+nav .subnav-open span,
+nav .subnav-dev-center span{
+	padding-left:20px;
+	font-size:12px;
+}
+
+nav .productBox a:hover{
+	color:#fff;
+	background:#01111a;
+}
+nav .productBox i{
+	height:100%;
+	vertical-align:middle;
+	display:inline-block;
+}
+nav .productBox img{
+	vertical-align:middle;
+	margin: 0 10px;
+}
+.subnav-products span{
+	font-size:12.5px;
+}
+nav .disable{
+	cursor:default;
+	border:none;
+	border-right:1px solid #000;
+}
+nav .disabled:nth-last-of-type(1){
+	border:none;
+}
+nav .disable:hover,
+nav .disable:visited{
+	background:#000;
+}
+nav .nav-arrow{
+	background:url(../img/nav-arrow.png);
+	background-position:0 0;
+	width: 7px;
+    height: 15px;
+    position: absolute;
+    right: 20px;
+    top: 17px;
+}
+nav .subnav-club .productBox:hover .nav-arrow,
+nav .subnav-open .productBox:hover .nav-arrow,
+nav .subnav-dev-center .productBox:hover .nav-arrow{
+	background-position:0 -15px;
+}
+.nav-icon-box{
+	position:absolute;
+	height:100px;
+	width:78px;
+	border:4px solid #272727;;
+	background:#212121;
+	right:4%;
+	text-align:center;
+	top:0;
+}
+
+nav .subnav-products .titleBox{
+	background:#000;
+	width:200px;
+	height:50px;
+	color:#959595;
+	cursor:pointer;
+	text-align:left;
+	border-bottom:1px solid #1c1c1c;
+	border-top:1px solid #1dafec;
+	position: relative;
+}
+
+nav .subnav-products .titleBox a{
+	color:#959595;
+	width:100%;
+	height:100%;
+	display:block;
+	text-decoration:none;
+	text-align: left;
+	line-height: 50px;
+	padding-left: 25px;
+	border-right:1px solid #1c1c1c;
+}
+nav .productBox .subnav {
+	padding: 0 0;
+	padding-top: 20px;
+}
+/* login 样式 */
+
+nav .subnav-login {
+    /* width: 836px; */
+    position: absolute;
+    /*border-top: 1px solid #1dafec;*/
+    z-index: 10;
+    margin-left: 10px;
+	list-style: none;
+	padding: 0 0;
+	overflow: hidden;
+	/*margin: 3px;*/
+    /*display: none;*/
+}
+nav .subnav-login .logintBox {
+    background: #000;
+    width: 100px;
+    height: 50px;
+    color: #959595;
+    cursor: pointer;
+    text-align: left;
+    border-bottom: 1px solid #1c1c1c;
+    border-right: 1px solid #1c1c1c;
+    position: relative;
+}
+nav .subnav-login .logintBox:nth-of-type(1){
+	border-top: 1px solid #1dafec;
+}
+nav .subnav-login .logintBox a {
+    color: #959595;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-decoration: none;
+    text-align: left;
+    line-height: 50px;
+    padding-left: 35px;
+}
+nav .subnav-login .logintBox a:hover {
+    color: #fff;
+}
+/* login 之后样式*/
+nav .subnav-login-out {
+    /* width: 836px; */
+    position: absolute;
+    border-top: 1px solid #1dafec;
+    z-index: 10;
+    margin-left: 10px;
+	list-style: none;
+	padding: 0 0;
+	overflow: hidden;
+    /*display: none;*/
+}
+nav .subnav-login-out .logintOutBox {
+    background: #000;
+    width: 150px;
+    height: 50px;
+    color: #959595;
+    cursor: pointer;
+    text-align: left;
+    border-bottom: 1px solid #1c1c1c;
+    border-right: 1px solid #1c1c1c;
+    position: relative;
+}
+nav .subnav-login-out .logintOutBox a {
+    color: #959595;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-decoration: none;
+    text-align: left;
+    line-height: 50px;
+    padding-left: 35px;
+}
+/* exp 样式*/
+nav .navbar-nav .expBox .subnav-products{
+	padding-top: 20px;
+    padding-left: 0px;    
+	margin-top: 0px;
+	border: 0px;
+}
+nav .navbar-nav-ul-padding-top .expBox li.productBox a{
+	padding-left: 0px;
+	text-align: center;
+}
+nav .expBox .subnav-products  .productBox:nth-of-type(1) {
+	border-top: 1px solid #1dafec;
+}
+/*覆盖bootstrap默认样式*/
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    /* border-color: #0078cd; */
+	border: 0;
+	box-shadow:initial;
+	-webkit-box-shadow:initial;
+}
+.collapsing .subnav-products,
+.collapse.in .subnav-products {
+    margin: 0 0 0 15px;    
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+.navbar-default .navbar-toggle{
+    border: 0;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+     background-color: initial;
+}
+/**定义新导航条样式*/
+.navbar-header #navlogo {
+	max-height: 26px;
+}
+.navbar .navbar-nav>li>a {
+    font-size: 16px;
+	padding-left: 18px;
+	padding-right: 18px;
+	color: #fff;
+}
+.navbar .navbar-header {
+	margin-top: 17px;
+}
+nav.navbar .navbar-search {
+	padding: 0 0;
+	margin:  0 0;
+}
+nav.navbar .navbar-search .navbar-form {
+	max-height: 27px;
+	padding: 0 0;
+	margin:  0 0;
+}
+nav.navbar .navbar-search .navbar-form .form-control {
+	background-color: transparent;
+	height: 26px;
+	border-radius: 12px;
+	max-width: 147px;
+	transition: max-width 0.4s ease-in-out;
+    color: white;
+    border-width: 0px;
+    background: rgba(255,255,255,0.4);
+	padding: 0 10px 0 10px;
+	margin: 0 0;
+}
+nav.navbar .navbar-search .navbar-form input::-webkit-input-placeholder {
+	color: #dfdfdf;
+}
+nav.navbar .navbar-search .navbar-form input::-moz-input-placeholder {
+	color: #dfdfdf;
+}
+nav.navbar .navbar-search .navbar-form input:focus{
+	max-width: 200px;
+}
+nav.navbar .navbar-nav a.navbar-login {
+	padding-top: 28px;
+	padding-bottom: 30px;
+}
+nav.navbar .navbar-login img {
+	max-height: 19px;
+	display: inherit;
+}
+nav.navbar .navbar-nav a.navbar-login {
+	padding-top: 28px;
+	padding-bottom: 30px;
+}
+nav.navbar li.logintBox,
+nav.navbar li.logintOutBox {
+	list-style: none;
+	display: block;
+}
+nav.navbar li.logintBox.dropdown>a,
+nav.navbar li.switch-button>a {
+	padding: 18px 18px 18px 18px;
+    display: inline-block;
+	line-height: 30px;
+}
+nav.navbar li.logintOutBox.dropdown>a {
+	padding: 18px 18px 16px 18px;
+    display: inline-block;
+	line-height: 30px;
+}
+nav.navbar li.switch-button {
+	list-style: none;
+	display: block;
+}
+nav.navbar li.switch-button>a {
+	font-size: 14px;
+	color: #fff;
+}
+nav.navbar li.switch-button>a:hover,
+nav.navbar li.switch-button>a:focus
+ {
+	background: transparent;
+    text-decoration: none;
+    color: #1dafec;
+}
+.navbarbg
+{
+	background-color: #000;
+}
+/* 982px 折叠点导航栏折叠点 */
+@media (max-width:982px) {
+	.navbar-toggle {
+		margin-top: -3px;
+	}
+	nav .subnav-products {
+		position: inherit;
+	}
+	nav .productBox .subnav {
+		padding-top: 0px;
+	}
+
+	nav .subnav-login,nav .subnav-login-out {
+		position: inherit;
+	}
+	nav.navbar li.switch-button,
+	nav.navbar li.logintBox, 
+	nav.navbar li.logintOutBox {
+		text-align: left;
+	}
+	nav.navbar li.logintBox.dropdown>a, nav.navbar li.logintOutBox.dropdown>a, nav.navbar li.switch-button>a {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	nav.navbar .navbar-search .navbar-form {
+		padding-left: 15px;
+	}
+	.navbar .navbar-nav>li>a {
+		padding: 15px 18px 14px;
+		line-height: 37px;
+		color: #FFF;
+		opacity: 1;
+		font-size: 16px;
+	}
+	.navbar-nav-ul-padding-top {
+		padding-top: 0px;
+	}
+	nav.navbar .navbar-search {
+		margin-bottom: 5px;
+	}
+	.navbarbg .container {
+		padding-left: 25px;
+		padding-right: 0px;
+	}
+	.collapsing .subnav-products, .collapse.in .subnav-products {
+		margin: 0 0;
+	}
+	nav .subnav-products .titleBox a {
+		border-left: 1px solid #1c1c1c;
+	}
+	nav .subnav-products .productBox {
+		border-left: 1px solid #1c1c1c;
+	}
+}
